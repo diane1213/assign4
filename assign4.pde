@@ -17,7 +17,7 @@ int countBulletFrame;    //Bullet Time Counter
 int bulletNum;           //Bullet Order Number
 
 /*--------Put Variables Here---------*/
-int alienNum = 48; 
+float alienNum = 48; 
 boolean[] life = {true, true, true};
 int lifeCount = 2;
 
@@ -125,7 +125,7 @@ void keyPressed() {
 }
 
 /*---------Make Alien Function-------------*/
-void alienMaker(int alienNum, int inputCol) {
+void alienMaker(float alienNum, float inputCol) {
   for (int i =0; i<alienNum; i++) {
     int col = i % inputCol;
     int row = i / inputCol;
