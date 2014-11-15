@@ -1,14 +1,14 @@
 class Laser {
 
-  float lX;
-  float lY;
-  float lSpeedX = 0;
-  float lSpeedY = 3;
-  float lSize = 3;
+  int lX;
+  int lY;
+  int lSpeedX = 0;
+  int lSpeedY = 3;
+  int lSize = 3;
   boolean gone = false;
 
 
-  Laser(float x, float y) {
+  Laser(int x, int y) {
     lX = x;
     lY = y;
   }
@@ -23,4 +23,3 @@ class Laser {
     lX+=lSpeedX;
   }
 }
-
