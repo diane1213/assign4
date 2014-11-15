@@ -126,8 +126,8 @@ void keyPressed() {
 /*---------Make Alien Function-------------*/
 void alienMaker(int alienNum, int inputCol) {
   for (int i =0; i<this.alienNum; i++) {
-    int col = int(i % inputCol;)
-    int row = int(i / inputCol;)
+    int col = int(i % inputCol);
+    int row = int(i / inputCol);
     aList[i] = new Alien(50 + col*40, 50 + row*50);
   }
 }
