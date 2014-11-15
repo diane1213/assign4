@@ -1,13 +1,13 @@
 class Alien {
 
-  int aSpeed = 1;
-  int aSize = 10;
-  int aScore = 10;
-  int aX;
-  int aY;
+  float aSpeed = 1;
+  float aSize = 10;
+  float aScore = 10;
+  float aX;
+  float aY;
   boolean die = false; 
 
-  Alien(int x, int y) {
+  Alien(float x, float y) {
     aX = x;
     aY = y;
   }
@@ -33,4 +33,3 @@ class Alien {
 
   
 }
-
