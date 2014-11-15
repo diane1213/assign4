@@ -15,7 +15,7 @@ int point;               //Game Score
 int expoInit;            //Explode Init Size
 int countBulletFrame;    //Bullet Time Counter
 int bulletNum;           //Bullet Order Number
-
+int alienNum = 48;
 /*--------Put Variables Here---------*/
 boolean[] life = {true, true, true};
 int lifeCount = 2;
