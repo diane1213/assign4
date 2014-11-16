@@ -1,8 +1,8 @@
 Ship ship;
 PowerUp ruby;
-Bullet[] bList=new Bullet[30];
-Laser[] lList=new Laser[49];
-Alien[] aList=new Alien[49];
+Bullet[] bList;
+Laser[] lList;
+Alien[] aList;
 
 //Game Status
 final int GAME_START   = 0;
