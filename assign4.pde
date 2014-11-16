@@ -50,6 +50,7 @@ void draw() {
   case GAME_START:
     /*---------Print Text-------------*/
     printText();
+    reset();
     /*--------------------------------*/
     break;
 
