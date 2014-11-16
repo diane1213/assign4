@@ -437,7 +437,6 @@ void reset() {
 
   /*-----------Call Make Alien Function--------*/
   alienMaker(48,12);
-  drawAlien();
   
   ship.posX = width/2;
   ship.posY = 460;
