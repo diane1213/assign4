@@ -61,6 +61,7 @@ void draw() {
     drawLife();
     ship.display(); //Draw Ship on the Screen
     drawAlien();
+    alien.move();
     drawBullet();
     drawLaser();
 
