@@ -15,8 +15,9 @@ int point;               //Game Score
 int expoInit;            //Explode Init Size
 int countBulletFrame;    //Bullet Time Counter
 int bulletNum;           //Bullet Order Number
-int alienNum = 48;
+
 /*--------Put Variables Here---------*/
+int alienNum = 48; 
 boolean[] life = {true, true, true};
 int lifeCount = 2;
 
@@ -124,11 +125,11 @@ void keyPressed() {
 }
 
 /*---------Make Alien Function-------------*/
-void alienMaker(int alienNum, float inputCol) {
+void alienMaker(int alienNum, int inputCol) {
   for (int i =0; i<alienNum; i++) {
-    int col = int(i % inputCol);
-    int row = int(i / inputCol);
-    aList[i] = new Alien(50 + col*40, 50 + row*50);
+    float col = i % inputCol;
+    float row = i / inputCol;
+    aList[i] = new Alien(50 + int(col)*40, 50 + int(row)*50);
   }
 }
 
@@ -330,6 +331,7 @@ void checkRubyDrop(int targetPoint){
   ruby.show = true;
  }
 }
+/*---------Check Ruby Hit Ship-------------*/
 
 /*---------Check Level Up------------------*/
 void checkRubyCatch() {
