@@ -1,8 +1,8 @@
 Ship ship;
 PowerUp ruby;
-Bullet[] bList;
-Laser[] lList;
-Alien[] aList;
+Bullet[] bList=new Bullet[30];
+Laser[] lList=new Laser[49];
+Alien[] aList=new Alien[49];
 
 //Game Status
 final int GAME_START   = 0;
@@ -27,8 +27,8 @@ void setup() {
   status = GAME_START;
 
   bList = new Bullet[30];
-  lList = new Laser[48];
-  aList = new Alien[100];
+  lList = new Laser[49];
+  aList = new Alien[49];
 
   size(640, 480);
   background(0, 0, 0);
@@ -50,7 +50,6 @@ void draw() {
   case GAME_START:
     /*---------Print Text-------------*/
     printText();
-    reset();
     /*--------------------------------*/
     break;
 
@@ -66,8 +65,6 @@ void draw() {
     drawLaser();
 
     /*---------Call functions---------------*/
-
-
     checkAlienDead();/*finish this function*/
     checkShipHit();  /*finish this function*/
     alienShoot(50);
@@ -128,9 +125,9 @@ void keyPressed() {
 /*---------Make Alien Function-------------*/
 void alienMaker(int alienNum, int inputCol) {
   for (int i =0; i<alienNum; i++) {
-    float col = i % inputCol;
-    float row = i / inputCol;
-    aList[i] = new Alien(50 + int(col)*40, 50 + int(row)*50);
+    int col = i % inputCol;
+    int row = i / inputCol;
+    aList[i] = new Alien(50 + col*40, 50 + row*50);
   }
 }
 
