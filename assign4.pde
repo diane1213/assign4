@@ -17,7 +17,7 @@ int countBulletFrame;    //Bullet Time Counter
 int bulletNum;           //Bullet Order Number
 
 /*--------Put Variables Here---------*/
-int alienNum = 53; 
+alienNum =53;
 boolean[] life = {true, true, true};
 int lifeCount = 2;
 
@@ -433,7 +433,7 @@ void reset() {
   
 
   /*-----------Call Make Alien Function--------*/
-  alienMaker(48,12);
+  alienMaker(53,12);
   
   ship.posX = width/2;
   ship.posY = 460;
