@@ -17,8 +17,7 @@ int countBulletFrame;    //Bullet Time Counter
 int bulletNum;           //Bullet Order Number
 
 /*--------Put Variables Here---------*/
-int alienNum = 53; 
-int inputCol = 12;
+int alienNum = 48; 
 boolean[] life = {true, true, true};
 int lifeCount = 2;
 
@@ -27,8 +26,8 @@ void setup() {
 
   status = GAME_START;
 
-  bList = new Bullet[53];
-  lList = new Laser[53];
+  bList = new Bullet[30];
+  lList = new Laser[30];
   aList = new Alien[100];
 
   size(640, 480);
