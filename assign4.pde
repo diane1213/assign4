@@ -17,7 +17,7 @@ int countBulletFrame;    //Bullet Time Counter
 int bulletNum;           //Bullet Order Number
 
 /*--------Put Variables Here---------*/
-int alienNum = 48; 
+int alienNum = 53; 
 boolean[] life = {true, true, true};
 int lifeCount = 2;
 
