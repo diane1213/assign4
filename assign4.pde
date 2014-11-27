@@ -17,17 +17,17 @@ int countBulletFrame;    //Bullet Time Counter
 int bulletNum;           //Bullet Order Number
 
 /*--------Put Variables Here---------*/
-alienNum =53;
+int alienNum =53;
 boolean[] life = {true, true, true};
 int lifeCount = 2;
-
+int laserNum;
 
 void setup() {
 
   status = GAME_START;
 
-  bList = new Bullet[50];
-  lList = new Laser[50];
+  bList = new Bullet[30];
+  lList = new Laser[30];
   aList = new Alien[100];
 
   size(640, 480);
@@ -249,12 +249,18 @@ void checkAlienDead() {
 void alienShoot(int frame) {
 
   if (frameCount % frame ==0 ) {
-    int i = 0;
-    do {
+    int i = int(random(alienNum));
+    while(aList[i].die ==true){
       i = int(random(alienNum));
+      continue;
+    }if(aList[i].die ==false){
+      lList[laserNum] = new Laser(aList[i].aX, aList[i].aY);
+      if (laserNum <lList.length-2){
+        laserNum++;
+      }else{
+        laserNum = 0;
+      }
     }
-   while (aList[i].die == true) ;
-    lList[i]= new Laser(aList[i].aX, aList[i].aY);
   }
 }
 
@@ -371,11 +377,11 @@ void printText() {
     fill(95, 194, 226);
     textSize(40);
     textAlign(CENTER);
-    text("WINNER", width/2, 300);
+    text("WINNER", width/2, 320);
 
     textSize(20);
     textAlign(CENTER);
-    text("Score:" + point, width/2, 340);
+    text("Score:" + point, width/2, 360);
     break;
 
   case GAME_LOSE:
@@ -495,3 +501,5 @@ void cheatKeys() {
     }
   }
 }
+
+
